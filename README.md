@@ -1,2 +1,2 @@
-# ITI-Summer-Training---Front
-projects front end and back end , I make it during summer training at 2025-july
+# ITI-Summer-Training - Front-END
+projects front-end training at 2025-july
