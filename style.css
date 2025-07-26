@@ -1,0 +1,475 @@
+/* General Styles */
+:root {
+    --primary: #4e54c8;
+    --primary-dark: #3a3fb5;
+    --secondary: #8f94fb;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+.section-header {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    color: var(--dark) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    height: 600px;
+    padding: 100px 0;
+    color: white;
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.bg-gradient-2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.bg-gradient-3 {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    margin: 0 5px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: none !important;
+}
+
+.carousel-indicators .active {
+    background-color: white !important;
+}
+
+/* Services Section Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: rgba(78, 84, 200, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Pricing Section Styles */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0 0 5px 5px;
+}
+
+.pricing-header {
+    padding: 30px;
+    text-align: center;
+    background: rgba(248, 249, 250, 0.5);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 1.5rem;
+}
+
+.pricing-features {
+    padding: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+.pricing-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-card .btn {
+    display: block;
+    margin: 0 auto 30px;
+    width: 80%;
+}
+
+/* Features Section Styles */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 250px;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.feature-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(78, 84, 200, 0.9);
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.feature-card:hover .feature-overlay {
+    bottom: 0;
+}
+
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+
+.feature-overlay h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background: white;
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Brands Section Styles */
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.brand-logo {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    max-width: 150px;
+    height: auto;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* CTA Section Styles */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--dark);
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .carousel-slide {
+        height: 500px;
+        padding: 80px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        height: 450px;
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .hero-section .btn-outline-light {
+        margin-left: 0;
+    }
+    
+    .services-grid, .pricing-grid, .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer .col-lg-3 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-slide {
+        height: 400px;
+        padding: 40px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
